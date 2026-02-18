@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mis XV Años - Invitación</title>
+
+  <!-- Tipografía -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+  <!-- Partículas decorativas -->
+  <div class="particles"></div>
+
+  <!-- Música (opcional) -->
+  <audio id="music" loop>
+    <source src="musica.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- Botón música -->
+  <button class="music-btn" id="musicBtn">🎵 Música</button>
+
+  <!-- HERO / PORTADA -->
+  <header class="hero">
+    <div class="overlay"></div>
+
+    <div class="hero-content">
+      
+      <h1 class="title">Mis XV Años</h1>
+      <h2 class="name">Milka Nair</h2>
+
+      <p class="subtitle">Una noche mágica para recordar</p>
+
+      <div class="hero-details">
+        <p>📅 Sábado 18 de Julio de 2026</p>
+        <p>🕗 Hora 3:00 | Misa 3:30</p>
+        <p>📍 Jardin Paraiso del Lago</p>
+      </div>
+
+      <a href="#detalles" class="btn main-btn">Ver Invitación 💌</a>
+    </div>
+
+    <div class="scroll-indicator">
+      <span></span>
+    </div>
+  </header>
+
+  <!-- CUENTA REGRESIVA -->
+  <section class="countdown-section">
+    <h2>⏳ Cuenta Regresiva</h2>
+    <p class="section-subtitle">Falta muy poco para esta noche inolvidable</p>
+
+    <div class="countdown" id="countdown">
+      <div class="time-box">
+        <span id="days">00</span>
+        <p>Días</p>
+      </div>
+
+      <div class="time-box">
+        <span id="hours">00</span>
+        <p>Horas</p>
+      </div>
+
+      <div class="time-box">
+        <span id="minutes">00</span>
+        <p>Minutos</p>
+      </div>
+
+      <div class="time-box">
+        <span id="seconds">00</span>
+        <p>Segundos</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- DETALLES DEL EVENTO -->
+  <section id="detalles" class="details">
+    <h2>🎉 Detalles del Evento</h2>
+    <p class="section-subtitle">Queremos compartir contigo este momento tan especial</p>
+
+    <div class="info-card">
+      <p><strong>📅 Fecha:</strong> Sábado 18 de Julio de 2026</p>
+      <p><strong>🕗 Hora:</strong> Hora 3:00 | Misa 3:30</p>
+      <p><strong>📍 Lugar:</strong> Jardin Paraiso del Lago</p>
+      <p><strong>📌 Dirección:</strong> Segunda privada de Tezontepec 66, Los pinos jiutepec mor.</p>
+      <p><strong>👗 Código de vestimenta:</strong> Formal / Elegante</p>
+    </div>
+
+    <div class="buttons">
+      <a class="btn map-btn" target="_blank"
+        href="https://maps.app.goo.gl/UotnoGf6NPfCYUcP6">
+        📍 Ver Ubicación en Google Maps
+      </a>
+
+      <a class="btn form-btn" target="_blank"
+        href="https://forms.gle/H8cgSZv3zDkT6v8d9">
+        ✅ Confirmar Asistencia
+      </a>
+    </div>
+  </section>
+
+  <!-- DEDICATORIA -->
+  <section class="dedication">
+    <h2>💖 Dedicatoria</h2>
+    <p class="section-subtitle">Con todo mi cariño</p>
+
+    <div class="dedication-card">
+      <p>
+        Llegó el momento de cambiar los tenis por tacones para darle paso a una noche mágica.
+        Gracias por acompañarme en mis XV años; tu presencia es el mejor regalo para comenzar
+        esta gran aventura que apenas florece.
+      </p>
+
+      <h3>✨ Con cariño: Nair ✨</h3>
+    </div>
+  </section>
+
+  <!-- MENSAJE FINAL -->
+  <section class="final-message">
+    <h2>🌙 Te Esperamos</h2>
+    <p>
+      Será una noche llena de emoción, música, alegría y recuerdos inolvidables.
+      <br>
+      Gracias por formar parte de este día tan especial.
+    </p>
+    
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>✨ Mis XV años Milka✨</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
