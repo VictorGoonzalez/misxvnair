@@ -19,7 +19,8 @@ html{
 }
 
 body {
-  background: radial-gradient(circle at top, var(--azul-petroleo), var(--azul-oscuro));
+  /* Fondo original estático eliminado */
+  background-color: var(--azul-oscuro); /* Color base mientras carga el fondo JS */
   font-family: "Poppins", sans-serif;
   color: var(--blanco);
   overflow-x: hidden;
@@ -53,6 +54,7 @@ body {
 ======================= */
 .hero {
   height: 100vh;
+  /* Mantenemos tu fondo de imagen original si lo tienes */
   background: linear-gradient(180deg, rgba(13,27,46,0.85), rgba(27,58,87,0.75)),
     url("fondo.jpg") center/cover no-repeat;
   position: relative;
@@ -270,7 +272,7 @@ h2 {
    CUENTA REGRESIVA
 ======================= */
 .countdown-section {
-  background: linear-gradient(180deg, rgba(27,58,87,0.88), rgba(13,27,46,0.95));
+  /* Fondo original estático eliminado para ver el nuevo fondo animado */
   border-top: 2px solid rgba(232,185,109,0.15);
   border-bottom: 2px solid rgba(232,185,109,0.15);
 }
@@ -318,7 +320,7 @@ h2 {
    DETALLES
 ======================= */
 .details {
-  background: radial-gradient(circle at bottom, rgba(75,163,195,0.18), rgba(13,27,46,0.92));
+  /* Fondo original estático eliminado */
 }
 
 .info-card {
@@ -351,7 +353,7 @@ h2 {
    DEDICATORIA
 ======================= */
 .dedication {
-  background: linear-gradient(180deg, rgba(13,27,46,0.95), rgba(27,58,87,0.9));
+  /* Fondo original estático eliminado */
 }
 
 .dedication-card {
@@ -384,7 +386,7 @@ h2 {
    MENSAJE FINAL
 ======================= */
 .final-message {
-  background: radial-gradient(circle at top, rgba(232,185,109,0.08), rgba(13,27,46,0.95));
+  /* Fondo original estático eliminado */
 }
 
 .final-message p {
@@ -515,50 +517,74 @@ h2 {
 }
 
 /* =========================
-   CIELO REALISTA PREMIUM
+   CIELO REALISTA PREMIUM (AQUÍ ESTÁ EL CAMBIO)
 ========================= */
 
 .night-background {
   position: fixed;
   inset: 0;
-  background:
-    radial-gradient(circle at 20% 80%, rgba(75,163,195,0.25), transparent 50%),
-    radial-gradient(circle at 80% 20%, rgba(197,147,76,0.25), transparent 50%),
-    radial-gradient(circle at bottom, #1B3A57 0%, #0D1B2E 75%);
-  z-index: -1;
+  /* Fondo base de espacio profundo y nebulosas animadas */
+  background: 
+    radial-gradient(circle at 50% 50%, #112236 0%, #050a0f 100%);
+  z-index: -2; /* Detrás de las partículas originales */
   overflow: hidden;
 }
 
-/* 🌙 MEDIA LUNA */
+/* Efecto de Nebulosa Realista Animada */
+.night-background::before {
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  top: -50%;
+  left: -50%;
+  background-image: 
+    radial-gradient(circle at 20% 30%, rgba(75, 163, 195, 0.15) 0%, transparent 40%),
+    radial-gradient(circle at 80% 70%, rgba(197, 147, 76, 0.1) 0%, transparent 40%);
+  filter: blur(60px);
+  animation: nebulaMove 40s infinite alternate ease-in-out;
+}
+
+@keyframes nebulaMove {
+  from { transform: rotate(0deg) scale(1); }
+  to { transform: rotate(10deg) scale(1.1); }
+}
+
+/* 🌙 LUNA MEJORADA: Menos "dibujo", más "brillo celestial real" */
 .moon {
   position: absolute;
-  top: 6%;
-  right: 8%;
-  width: 170px;
-  height: 170px;
-  background: radial-gradient(circle at 35% 35%, #E8B96D 0%, #C5934C 60%);
+  top: 8%;
+  right: 10%;
+  width: 100px; /* Un poco más pequeña y elegante */
+  height: 100px;
+  background: #fff;
   border-radius: 50%;
-  box-shadow: 0 0 100px #E8B96D, 0 0 160px rgba(232,185,109,0.5);
+  box-shadow: 
+    0 0 40px #fff, 
+    0 0 80px rgba(255, 255, 255, 0.4),
+    0 0 150px rgba(75, 163, 195, 0.2);
+  opacity: 0.9;
   animation: moonGlow 4s ease-in-out infinite alternate;
 }
 
+/* El recorte de la luna para que sea creciente */
 .moon::after {
   content: "";
   position: absolute;
-  top: 0;
-  left: 55px;
-  width: 170px;
-  height: 170px;
-  background: #0D1B2E;
+  top: -5px;
+  left: 25px; /* Ajusta para el grosor de la luna */
+  width: 100px;
+  height: 100px;
+  background: #050a0f; /* Debe coincidir con el color más oscuro del fondo */
   border-radius: 50%;
 }
 
 @keyframes moonGlow {
-  from { box-shadow: 0 0 70px #E8B96D; }
-  to { box-shadow: 0 0 140px #E8B96D; }
+  from { box-shadow: 0 0 40px #fff, 0 0 80px rgba(255, 255, 255, 0.4); }
+  to { box-shadow: 0 0 60px #fff, 0 0 110px rgba(255, 255, 255, 0.5); }
 }
 
-/* ESTRELLAS REALISTAS */
+/* ESTRELLAS REALISTAS (Mantenemos tus clases originales .star y .gold-star) */
 .star {
   position: absolute;
   border-radius: 50%;
@@ -576,7 +602,7 @@ h2 {
   to { opacity: 1; transform: scale(1.4); }
 }
 
-/* ESTRELLAS FUGACES */
+/* ESTRELLAS FUGACES (Mantenemos tu animación original) */
 .shooting-star {
   position: absolute;
   width: 2px;
