@@ -136,3 +136,54 @@ document.querySelectorAll(".form-btn, .main-btn").forEach(btn => {
     launchConfetti(1800);
   });
 });
+
+// ==========================
+// GENERADOR DE ESTRELLAS
+// ==========================
+
+function createStars() {
+  const container = document.querySelector(".night-background");
+
+  // MUCHÍSIMAS estrellas pequeñas realistas
+  for (let i = 0; i < 350; i++) {
+    const star = document.createElement("div");
+    star.classList.add("star");
+
+    const size = Math.random() * 2 + 0.5;
+    star.style.width = size + "px";
+    star.style.height = size + "px";
+    star.style.top = Math.random() * 100 + "%";
+    star.style.left = Math.random() * 100 + "%";
+    star.style.animationDuration = (Math.random() * 5 + 3) + "s";
+
+    container.appendChild(star);
+  }
+
+  // Estrellas doradas brillantes
+  for (let i = 0; i < 60; i++) {
+    const star = document.createElement("div");
+    star.classList.add("star", "gold-star");
+
+    const size = Math.random() * 4 + 2;
+    star.style.width = size + "px";
+    star.style.height = size + "px";
+    star.style.top = Math.random() * 100 + "%";
+    star.style.left = Math.random() * 100 + "%";
+
+    container.appendChild(star);
+  }
+
+  // MUCHAS estrellas fugaces
+  for (let i = 0; i < 5; i++) {
+    const shootingStar = document.createElement("div");
+    shootingStar.classList.add("shooting-star");
+
+    shootingStar.style.top = Math.random() * 50 + "%";
+    shootingStar.style.left = Math.random() * 100 + "%";
+    shootingStar.style.animationDelay = Math.random() * 8 + "s";
+
+    container.appendChild(shootingStar);
+  }
+}
+
+window.addEventListener("load", createStars);

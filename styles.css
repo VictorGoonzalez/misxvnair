@@ -513,3 +513,83 @@ h2 {
     transform: translateY(110vh) rotate(720deg);
   }
 }
+
+/* =========================
+   CIELO REALISTA PREMIUM
+========================= */
+
+.night-background {
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(circle at 20% 80%, rgba(75,163,195,0.25), transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(197,147,76,0.25), transparent 50%),
+    radial-gradient(circle at bottom, #1B3A57 0%, #0D1B2E 75%);
+  z-index: -1;
+  overflow: hidden;
+}
+
+/* 🌙 MEDIA LUNA */
+.moon {
+  position: absolute;
+  top: 6%;
+  right: 8%;
+  width: 170px;
+  height: 170px;
+  background: radial-gradient(circle at 35% 35%, #E8B96D 0%, #C5934C 60%);
+  border-radius: 50%;
+  box-shadow: 0 0 100px #E8B96D, 0 0 160px rgba(232,185,109,0.5);
+  animation: moonGlow 4s ease-in-out infinite alternate;
+}
+
+.moon::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 55px;
+  width: 170px;
+  height: 170px;
+  background: #0D1B2E;
+  border-radius: 50%;
+}
+
+@keyframes moonGlow {
+  from { box-shadow: 0 0 70px #E8B96D; }
+  to { box-shadow: 0 0 140px #E8B96D; }
+}
+
+/* ESTRELLAS REALISTAS */
+.star {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle, #ffffff 0%, rgba(255,255,255,0.6) 40%, transparent 70%);
+  animation: twinkle 5s infinite ease-in-out alternate;
+}
+
+.gold-star {
+  background: radial-gradient(circle, #E8B96D 0%, rgba(232,185,109,0.6) 40%, transparent 70%);
+  box-shadow: 0 0 12px #E8B96D;
+}
+
+@keyframes twinkle {
+  from { opacity: 0.3; transform: scale(0.8); }
+  to { opacity: 1; transform: scale(1.4); }
+}
+
+/* ESTRELLAS FUGACES */
+.shooting-star {
+  position: absolute;
+  width: 2px;
+  height: 120px;
+  background: linear-gradient(-45deg, #E8B96D, transparent);
+  opacity: 0;
+  transform: rotate(45deg);
+  animation: shoot 6s linear infinite;
+}
+
+@keyframes shoot {
+  0% { opacity: 0; transform: translate(0,0) rotate(45deg); }
+  10% { opacity: 1; }
+  60% { opacity: 0; transform: translate(-600px,600px) rotate(45deg); }
+  100% { opacity: 0; }
+}
