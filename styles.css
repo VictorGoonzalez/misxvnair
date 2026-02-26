@@ -319,9 +319,7 @@ h2 {
 /* =======================
    DETALLES
 ======================= */
-.details {
-  /* Fondo original estático eliminado */
-}
+
 
 .info-card {
   max-width: 720px;
@@ -352,9 +350,6 @@ h2 {
 /* =======================
    DEDICATORIA
 ======================= */
-.dedication {
-  /* Fondo original estático eliminado */
-}
 
 .dedication-card {
   max-width: 820px;
@@ -385,9 +380,6 @@ h2 {
 /* =======================
    MENSAJE FINAL
 ======================= */
-.final-message {
-  /* Fondo original estático eliminado */
-}
 
 .final-message p {
   margin-top: 22px;
