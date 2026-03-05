@@ -617,16 +617,15 @@ h2 {
    IMAGEN VESTIDO
 ======================= */
 
-.vestido-img {
-  margin-top: 30px;
-  width: 280px;
-  max-width: 85%;
-  border-radius: 20px;
-  box-shadow: 0 0 40px rgba(232,185,109,0.35);
-  transition: 0.4s ease;
+.vestido-img{
+  display: block;
+  margin: 25px auto;
+  max-width: 260px;
+  filter: drop-shadow(0 0 10px rgba(232,185,109,0.4));
 }
 
 .vestido-img:hover {
   transform: scale(1.05);
   box-shadow: 0 0 60px rgba(232,185,109,0.6);
 }
+
